@@ -1,0 +1,14 @@
+{
+  "name": "test-gha",
+  "version": "1.0.0",
+  "description": "test github action",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Miguel Chinchay",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
+}
