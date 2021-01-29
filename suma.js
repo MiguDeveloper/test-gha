@@ -1,5 +1,5 @@
 const sum = (a, b) => {
-  return parseFloat(a) + parseFloat(b);
+  return parseInt(a) + parseFloat(b);
 };
 
 module.exports = sum;
