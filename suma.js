@@ -1,5 +1,7 @@
-const sum = (a, b) => {
+const add = (a, b) => {
   return parseInt(a) + parseInt(b);
 };
 
-module.exports = sum;
+const substract = (minu, sust) => minu - sust;
+
+module.exports = { add, substract };
