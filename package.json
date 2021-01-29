@@ -2,7 +2,7 @@
   "name": "test-gha",
   "version": "1.0.0",
   "description": "test github action",
-  "main": "index.js",
+  "main": "suma.js",
   "scripts": {
     "test": "jest",
     "build": "node suma"
