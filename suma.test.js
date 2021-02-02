@@ -1,5 +1,11 @@
 // BDD: behavior-driven development (desarrollo guiado por comportamiento)
-const { add, substract, isVowel, countVowel } = require('./suma');
+const {
+  add,
+  substract,
+  isVowel,
+  countVowel,
+  countVowelFast,
+} = require('./suma');
 
 describe('Sumar', () => {
   test('1 + 2 = 3', () => {
@@ -34,5 +40,9 @@ describe('isVowel', () => {
 describe('countVowel', () => {
   test('miguel devuelve {"a":0,"e":1,"i":1,"o":0,"u":1}', () => {
     expect(countVowel('miguel')).toEqual({ a: 0, e: 1, i: 1, o: 0, u: 1 });
+  });
+
+  test('miguel devuelve {"a":0,"e":1,"i":1,"o":0,"u":1}', () => {
+    expect(countVowelFast('miguel')).toEqual({ a: 0, e: 1, i: 1, o: 0, u: 1 });
   });
 });

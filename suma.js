@@ -22,4 +22,12 @@ const countVowel = (string) => {
   return count;
 };
 
-module.exports = { add, substract, isVowel, countVowel };
+const countVowelFast = (str) => {
+  return [...str].reduce(
+    (acc, curr) =>
+      acc.hasOwnProperty(curr) ? { ...acc, [curr]: acc[curr] + 1 } : acc,
+    { a: 0, e: 0, i: 0, o: 0, u: 0 }
+  );
+};
+
+module.exports = { add, substract, isVowel, countVowel, countVowelFast };
