@@ -28,6 +28,22 @@ describe('Restar', () => {
 });
 
 describe('isVowel', () => {
+  it('deberia arrojar error cuando se invoca sin string', () => {
+    expect(() => isVowel()).toThrow(TypeError);
+  });
+
+  it('deberia arrojar error cuando se invoca con un numero', () => {
+    expect(() => isVowel(123)).toThrow(Error);
+  });
+
+  it('deberia devolver error cuando length de string > 1 : aaa', () => {
+    expect(() => isVowel('aaa')).toThrow('Args length must be 1'); //toThrow(Error)
+  });
+
+  test('isVowel retorna false para input "ae"', () => {
+    expect(() => isVowel('ae')).toThrow(Error);
+  });
+
   test('isVowel retorna true para input "a"', () => {
     expect(isVowel('a')).toBe(true);
   });
@@ -38,11 +54,11 @@ describe('isVowel', () => {
 });
 
 describe('countVowel', () => {
-  test('miguel devuelve {"a":0,"e":1,"i":1,"o":0,"u":1}', () => {
+  it('miguel devuelve {"a":0,"e":1,"i":1,"o":0,"u":1}', () => {
     expect(countVowel('miguel')).toEqual({ a: 0, e: 1, i: 1, o: 0, u: 1 });
   });
 
-  test('miguel devuelve {"a":0,"e":1,"i":1,"o":0,"u":1}', () => {
+  it('miguel devuelve {"a":0,"e":1,"i":1,"o":0,"u":1}', () => {
     expect(countVowelFast('miguel')).toEqual({ a: 0, e: 1, i: 1, o: 0, u: 1 });
   });
 });

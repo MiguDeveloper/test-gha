@@ -5,6 +5,12 @@ const add = (a, b) => {
 const substract = (minu, sust) => minu - sust;
 
 const isVowel = (character) => {
+  if (typeof character !== 'string') {
+    throw TypeError('Se espera como argumento un string');
+  }
+  if (character.length !== 1) {
+    throw Error('Args length must be 1');
+  }
   return 'aeiou'.includes(character);
 };
 
