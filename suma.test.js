@@ -1,4 +1,5 @@
 // BDD: behavior-driven development (desarrollo guiado por comportamiento)
+const { maxNumPro } = require('./arrays');
 const {
   add,
   substract,
